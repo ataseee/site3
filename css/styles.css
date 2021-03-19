@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=RocknRoll+One&family=Wire+One&display=swap');
+
+body {
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+a, p, h1 {
+    text-decoration: none;
+    color: #faedd2;
+}
+
+header {
+    background-color: #a41b23;
+}
+
+.banner {
+    background: url(../img/bg01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: #a41b23;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    padding: 0 10px 0 10px;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: translate(-40%);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.elipse {
+    width: 900px;
+    height: 900px;
+    overflow: hidden;
+    animation: 15s linear 0s normal none infinite running ellipse;
+    -webkit-animation: 15s linear 0s normal none infinite running ellipse;
+    z-index: 0;
+    filter: opacity(0.5);
+}
+
+@keyframes ellipse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes ellipse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 100px;
+    z-index: 5;
+}
+
+.objects {
+    align-items: center;
+    display: flex;
+    z-index: 2;
+    text-align: center;
+}
+
+.samurai img {
+    width: 500px;
+    animation: 5s linear 0s normal none infinite running samurai;
+    -webkit-animation: 5s linear 0s normal none infinite running samurai;
+}
+
+@keyframes samurai {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+  }
+  @-webkit-keyframes samurai {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+  }
+
+.title {
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.title p {
+    letter-spacing: 2px;
+}
+
+header h1 {
+    font-size: 150px;
+    font-family: 'Wire One', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+nav a {
+    border-radius: 30px;
+    background-color: #f4272c;
+    padding: 20px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a:hover::before {
+    height: 100%;
+}
+
+#linkstwist {
+    margin-left: 70px;
+}
+
+.social_tools {
+    position: absolute;
+    right: 10%;
+    height: 200px;
+    display: block;
+    top: 50px;
+}
+
+.social_tools i {
+    background-color: #f4272c;
+    padding: 10px;
+    border-radius: 50%;
+    color: #faedd2;
+    
+}
+
+@media (max-width: 1400px) {
+    .wrapper {
+        display: block;
+        padding: 0;
+    }
+
+    .objects {
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .samurai {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .samurai img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .objects {
+        display: block;
+    }
+
+    .elipse {
+        width: 800px;
+        height: 800px;
+    }
+
+    #linkstwist {
+        margin-left: 0;
+    }
+
+    nav {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 80px;
+        font-family: 'Wire One', sans-serif;
+    }
+}
+
+@media (max-width: 400px) {
+    .elipse {
+        width: 80px;
+        height: 80px;
+    }
+
+    .social_tools i {
+        background-color: #f4272c;
+        padding: 5px;
+    }
+
+    .social_tools {
+        position: absolute;
+        right: 10%;
+        height: 200px;
+        display: block;
+        top: 30px;
+    }
+
+    .samurai img {
+        width: 200px;
+    }
+}
